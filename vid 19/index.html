@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fonts</title>
     
         
       
@@ -18,9 +18,12 @@
         h2{
             text-transform:uppercase;
             text-decoration: underline;
-            text-decoration-style: wavy;
+            /* text-decoration-style: double; */
             text-decoration-thickness:8px;
             text-decoration-color: blue;
+            /* text-indent: 45px; */
+            text-overflow: ellipsis;
+            text-align: center;
         }
         p {
             /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -30,6 +33,14 @@
             font-size: 20px;
             /* line-height: 4; */
             text-decoration: underline;
+
+        }
+        .lorem{
+            border: 2px solid royalblue;
+            width: 45px;
+            text-overflow: clip;
+            overflow: hidden;
+            /* word-break: break-all; */
         }
     </style>
 </head>
@@ -38,8 +49,8 @@
     <div>
         <h1>Fonts</h1>
         <h2>about forms</h2>
-        <p>This is a video on fonts </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est sed eveniet inventore ad odit id adipisci facilis hic? Dolorem velit accusantium est? Perferendis rem deserunt accusamus aspernatur magnam, dolorem in ullam debitis ex quaerat tenetur eos nobis dolores, commodi, vero nulla beatae est dignissimos.</p>
+        <p >This is a video on fonts </p>
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est sed eveniet inventore ad odit id adipisci facilis hic? Dolorem velit accusantium est? Perferendis rem deserunt accusamus aspernatur magnam, dolorem in ullam debitis ex quaerat tenetur eos nobis dolores, commodi, vero nulla beatae est dignissimos.</p>
     </div>
 </body>
 
