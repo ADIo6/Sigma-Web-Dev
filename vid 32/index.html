@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersize 3</title>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    img{
+        height: 250px;
+        width: 350px;
+            }
+
+            body{
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            }
+#container{
+        border: 2px solid gray;
+        width: 360px;
+        height: 950h;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 2px 2px 5px #535353;
+    }
+    .image{
+        display: flex;
+        
+        justify-content: center;
+        border-radius: 4px;
+        border: 1px solid gray;
+        fill: border;
+    }
+    .about1{
+        
+        margin: 10px;
+        display: inline-block;
+        padding: 5px 6px;
+        border: 1px solid gray;
+        border-radius: 15px;
+        background: rgba(202, 199, 199, 0.863);
+    }
+    .about2{
+        margin: 10px ;
+        display: inline-block;
+        padding: 5px 6px;
+        border: 1px solid gray;
+        border-radius: 15px;
+        background: rgba(202, 199, 199, 0.863);
+    }
+    h2{
+        font-size: 2em;
+        padding: 5px;
+
+    }
+    .desc{
+        padding: 5px;
+        margin: 5px;
+    }
+    .readmore{
+        text-align: center;
+        padding: 5px;
+    }
+    .read{
+        padding: 10px;
+        border: transparent;
+        border-radius: 5px;
+        color: blue;
+        font-weight: 400;
+        background: skyblue;
+        cursor: pointer;
+    }
+    .read:hover{
+        color: #535353;
+        background-color: black;
+    }
+</style>
+<body>
+    <div id="container">
+        <div class="image">
+            <img src="card.jpg" alt="error loading image">
+
+        </div>
+        <div>
+
+            <span class="about1">Nature</span>
+            <span  class="about2">Lake</span>
+
+        </div>
+        <div>
+            <h2>lago di braise</h2>
+            <p class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem itaque omnis, corporis vel nam sequi nulla ea dolorem magnam alias, unde sunt obcaecati sapiente maiores. Itaque autem ab praesentium voluptatibus.
+            </p>
+        </div>
+
+        <div class="readmore">
+            <input class="read" type="button" value="Read more">
+
+        </div>
+
+        
+    </div>
+</body>
+</html>

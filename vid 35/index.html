@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css Selectors</title>
+    <style>
+        
+         /* .box:first-child{
+            background-color: red;
+         } */
+         /* .box:first-line{
+            color: yellow;
+         } */
+         /* .boxes *{
+            color: rgb(0, 119, 255);
+            border: 2px solid black;
+            
+         } */
+
+         /* [data-color="primary"] {
+            margin: 45px;
+         } */
+         /* grouping of selectors by putting ',' between the desired elements */
+         /* p, a, .box, [data-color="primary"]
+         {
+            padding-top: 45px;
+         } */
+
+         /* nth child selctor */
+
+         .box:nth-child(even)
+         {
+            background-color: blue;
+         }
+         .box:nth-last-child(1)
+         {
+            background-color: red;
+         }
+
+
+         /* these are called pseudo elements not pseudo selector */
+         .boxes::before{
+            content: "adil is awesomee"
+         }
+         .boxes::after{
+            content: "hey am good"
+            back
+         }
+
+         ::selection{
+            background: #000;
+            color: aqua;
+         }
+
+         ::first-letter{
+            color: chartreuse;
+            font-size: 45px;
+         }
+         
+         input::placeholder{
+            color: rgb(65, 65, 92);
+            font-size: x-large;
+         }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey iam a box </div>
+        <div class="box">Hey iam a box</div>
+        <div class="box">Hey iam a box</div>
+    </div>
+    <input type="text" placeholder="Type your name here//\\">
+</body>
+</html>
