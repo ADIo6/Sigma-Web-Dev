@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersize 12</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .box{
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+         Given 5 boxes assign a random color and a random background to each box using DOM concepts
+     -->
+     <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+     </div>
+
+     <script>
+       let cont= document.body.firstElementChild
+        
+        cont.children[0].style.backgroundColor="white"
+        cont.children[1].style.backgroundColor="yellow"
+        cont.children[2].style.backgroundColor="red"
+        cont.children[3].style.backgroundColor="green"
+        cont.children[4].style.backgroundColor="black"
+
+        cont.children[0].style.color="randomBgc()"
+        cont.children[1].style.color="randomBgc()"
+        cont.children[2].style.color="randomBgc()"
+        cont.children[3].style.color="randomBgc()"
+        cont.children[4].style.color="randomBgc()"
+    
+        function randomBgC(){
+            let n=[1,2,3,4,5,6,7,8,9,0,A,B,C,D,E,F]
+            let color='#'
+            let rand=Math.random()
+            if(rand>=0.4)
+            {
+                for (let i = 0; i < 6; i++) {
+                    color+=n[i];
+                    return color
+                }
+                    
+            }
+        }
+     </script>
+</body>
+</html>
