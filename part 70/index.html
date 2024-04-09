@@ -35,33 +35,23 @@
      </div>
 
      <script>
-       let cont= document.body.firstElementChild
-        
-        cont.children[0].style.backgroundColor="white"
-        cont.children[1].style.backgroundColor="yellow"
-        cont.children[2].style.backgroundColor="red"
-        cont.children[3].style.backgroundColor="green"
-        cont.children[4].style.backgroundColor="black"
+        console.log("script initiallizing")
+    //    let cont= document.body.firstElementChild
+    // let cont=document.getElementsByClassName("box")
+    let cont=document.querySelector(".container").children
 
-        cont.children[0].style.color="randomBgc()"
-        cont.children[1].style.color="randomBgc()"
-        cont.children[2].style.color="randomBgc()"
-        cont.children[3].style.color="randomBgc()"
-        cont.children[4].style.color="randomBgc()"
-    
-        function randomBgC(){
-            let n=[1,2,3,4,5,6,7,8,9,0,A,B,C,D,E,F]
-            let color='#'
-            let rand=Math.random()
-            if(rand>=0.4)
-            {
-                for (let i = 0; i < 6; i++) {
-                    color+=n[i];
-                    return color
-                }
-                    
-            }
-        }
+    function getRandomColor() {
+        let val1=Math.ceil(0 + Math.random()*255);
+        let val2=Math.ceil(0 + Math.random()*255);;
+        let val3=Math.ceil(0 + Math.random()*255);;
+        return `rgb(${val1},${val2},${val3})`
+    }
+
+        Array.from(cont).forEach(e=>{
+            e.style.backgroundColor=getRandomColor();
+            e.style.color=getRandomColor();
+        })
+
      </script>
 </body>
 </html>
