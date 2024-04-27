@@ -5,13 +5,38 @@
 }
 
 
-.container{
+
+.card{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #212121;
-    padding: 10px;
-    height: 15vh;
-    width: 85%;
+    height: 20vh;
+    width: 58vw;
+    color: white;
+    padding: 12px;
+    margin: 10px;
 
+}
+.thumbnail{
+    position: relative;
+}
+.thumbnail img{
+    width: 200px;
+    
+}
+
+.duration{
+    color: white;
+    background-color: rgba(5, 5, 5, 0.562);
+    position: absolute;
+    z-index:10;
+    bottom: 5px;
+    right: 3px;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.text>h2,p{
+    padding: 10px 10px ;
 }
