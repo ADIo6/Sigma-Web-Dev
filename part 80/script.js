@@ -1,3 +1,11 @@
+const student={
+    fullName:"Adil Ahmed",
+    marks: 98,
+    printMarks:function () {
+        console.log("marks = ",this.marks);
+        
+    }
+}
 // let obj= {
 //     a:1,            
 //     b:"harry"   
@@ -56,7 +64,6 @@ console.log(a)
 
 let l =new lion("sher")
 console.log(l)
-
 
 
 
