@@ -253,28 +253,33 @@ main {
 }
 
 .book-container {
+  
+    height: 125px;
+    width: 310px;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 1;
     position: absolute;
     border: 1px solid rgb(122, 120, 120);
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     background: black;
 }
 
 .book-container>img {
-    height: 85px;
-    width: 60px;
+    height: 100px;
+    width: 65px;
 }
 
 .download-gif{
-    height: 15px;
-    width: 15px;
+    display: flex;
+    height: 16px;
+    width: 16px;
 }
 
 .book-container p {
+    padding-bottom: 5px;
     font-size: large;
     font-weight: 700;
 }
@@ -288,7 +293,8 @@ main {
 
 .main-description2 {
     display: grid;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    align-content: center;
 
 }
