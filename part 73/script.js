@@ -1,3 +1,5 @@
+const generateBtn = document.querySelector(".btn");
+
 function createCard(title, cName, views, monthsOld, duration, thumbnail){
     let viewStr
     if(views<1000)
@@ -31,5 +33,18 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail){
 
 document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html
 }
+generateBtn.addEventListener("click", () => {
+    // Ask user for input step by step
+    const title = prompt("Enter the video title:");
+    const cName = prompt("Enter the channel name:");
+    const views = parseInt(prompt("Enter the number of views:"), 10);
+    const monthsOld = parseInt(prompt("Enter how many months ago it was uploaded:"), 10);
+    const duration = prompt("Enter the video duration (e.g., 12:34):");
+    const thumbnail = prompt("Enter the thumbnail URL:");
 
-createCard("Introduction to backend | Sigma web dev video #2","CodeWithAdil", 567000, 7 , "31:21","https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ" )
+    // Create a new card with user-provided values
+    createCard(title, cName, views, monthsOld, duration, thumbnail);
+});
+
+
+

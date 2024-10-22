@@ -1,15 +1,28 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 body{
-
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    /* Ensure body is full viewport height */
+    /* height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; */
     background-color: green;
+    color: white;
 }
-.container{
-display: grid;
-justify-content: center;
-align-items: center;
-
+/* .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
 }
+.container h2{
+    margin: 10px;
+    padding: 10px;
+} */

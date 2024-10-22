@@ -34,24 +34,24 @@ let adjectives={
     "3": " fire "
 }
 let random=Math.random();
-
-if (random>0.2)
+let x1,x2,x3;
+if (random>0.33)
 {   
     for (let i = 1; i <=3; i++) {
 
-        const x1= adjectives[i];
+         x1= adjectives[i];
         
         for (let j = 1; j <=3; j++) {
     
-            const x2= shop_name[j];
+             x2= shop_name[j];
             
             for (let k = 1; k <=3; k++) {
-                const x3= Another_words[k];
+                 x3= Another_words[k];
                 
-                console.log(x1.concat(x2, x3))
             }
         }
     }
+    console.log(x1.concat(x2, x3))
     
 }
 else

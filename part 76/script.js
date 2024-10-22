@@ -14,7 +14,7 @@ async function getData(){
    let data= await x.json()
     // .then(response => response.json())
     // .then(json => console.log(json))
-    console.log(data);
+    return data;
 
     
 }
@@ -28,7 +28,7 @@ async function main()
     
     console.log("load data");
     
-    let data = await getData()
+    let data = await getData();
     
     console.log(data)
     console.log("process data");

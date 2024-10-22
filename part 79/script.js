@@ -7,8 +7,8 @@ if(isNaN(a)||isNaN(b))
     throw SyntaxError("Sorry this is not allowed")
 }
 
-let sum= parseInt(a)+ parseInt(b);
-let x=1;
+let sum = parseInt(a) + parseInt(b);
+// let x = 4;
 
 function main(){
 
@@ -17,6 +17,9 @@ function main(){
         return true
     } catch (error) {
         console.log("Error AGAYA BHAI")
+        alert(error.name)
+        alert(error.message)
+        alert(error.stack)
         return false
     }
     // finally is used for function mainly 

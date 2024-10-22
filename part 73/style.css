@@ -8,7 +8,7 @@
 
 .card{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #212121;
     height: 20vh;
@@ -16,14 +16,16 @@
     color: white;
     padding: 12px;
     margin: 10px;
-
+    border-radius: 10px;
+    gap: 20px; /*Adds spacing between the thumbnail and text*/
 }
 .thumbnail{
     position: relative;
+    flex-shrink: 0; /* Prevents the thumbnail from shrinking */
 }
 .thumbnail img{
     width: 200px;
-    
+    border-radius: 10px;
 }
 
 .duration{
@@ -37,6 +39,34 @@
     border-radius: 6px;
 }
 
+.text {
+    flex-grow: 1; /* Allows the text section to take up the remaining space */
+}
+
 .text>h2,p{
     padding: 10px 10px ;
+}
+
+.btn{
+    cursor: pointer;
+    position: relative;
+    top: 10%;
+    right: -90%;
+    margin: 10px;
+    padding: 20px 10px;
+    border: #212121;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: medium;
+    color: #212121;
+    box-shadow: 0 9px #999;
+}
+.btn:hover {
+    background-color: #3e5e8e;
+    color: #fff;
+}
+.btn:active{
+    background-color: #3e5e8e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

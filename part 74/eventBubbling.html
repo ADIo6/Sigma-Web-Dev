@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Bubbling</title>
+    <title>Event Bubbling(Asked in interviews a lot)</title>
     <style>
         .child{
             background-color: aliceblue;
@@ -16,6 +16,7 @@
             background-color: red;
             padding: 20px;
             margin: 10px;
+            cursor:grabbing;
         }
 
         .container{
@@ -52,17 +53,20 @@
 
 
     function getRandomColor() {
-        let val1=Math.ceil(0 + Math.random()*255);
-        let val2=Math.ceil(0 + Math.random()*255);;
-        let val3=Math.ceil(0 + Math.random()*255);;
-        return `rgb(${val1},${val2},${val3})`
+        let val1 = Math.ceil(0 + Math.random() * 255);
+        let val2 = Math.ceil(0 + Math.random() * 255);;
+        let val3 = Math.ceil(0 + Math.random() * 255);;
+        return `rgb(${val1}, ${val2}, ${val3})`
     }
 
 
 
     let a=setTimeout(() => {
         document.querySelector(".childcontainer").style.background=getRandomColor()
-    }, 5000);
+    }, 1000);
+    // let a=setInterval(() => {
+    //     document.querySelector(".childcontainer").style.background=getRandomColor()
+    // }, 1000);
 
     console.log(a)
 </script>

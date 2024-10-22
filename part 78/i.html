@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Hacking</title>
+    <style>
+        body {
+            background-color: rgb(7, 133, 7);
+            color: black;
+            font-weight: 900;
+            font-size: 30px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const addItem = async (item) => {
+            await randomDelay();
+            let div = document.createElement("div");
+            div.innerHTML = item;
+            document.body.append(div);
+        }
+
+        const randomDelay = () => {
+            return new Promise((resolve) => {
+                let timeout = 1 + 6 * Math.random();
+                setTimeout(() => {
+                    resolve();
+                }, timeout * 1000);
+            });
+        }
+
+        async function main() {
+            let t = setInterval(() => {
+                let last = document.body.lastElementChild;
+                if (last && last.innerHTML.endsWith("...")) {
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3);
+                } else if (last) {
+                    last.innerHTML += ".";
+                }
+            }, 100);
+
+            let text = [
+                "Initialized Hacking now reading your files",
+                "Reading your Files",
+                "Password files Detected",
+                "Sending all passwords and personal files to",
+                "Cleaning up"
+            ];
+
+            for (const item of text) {
+                await addItem(item);
+            }
+
+            await randomDelay();
+            clearInterval(t);  // Stops the ellipsis animation
+        }
+
+        main();
+    </script>
+</body>
+</html>

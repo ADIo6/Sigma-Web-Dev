@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,42 @@
 
 </head>
 <body>
+
     <script src="script.js"></script>
+    <script src="hw1.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load JS with Promise</title>
+</head>
+<body>
+
+    <script>
+        // Function to load a script dynamically using a Promise
+        function loadScript(url) {
+            return new Promise((resolve, reject) => {
+                let script = document.createElement('script');
+                script.src = url;
+                script.onload = () => resolve(url);  // Resolve when the script is loaded
+                script.onerror = () => reject(new Error(`Failed to load script ${url}`));  // Reject if there's an error
+                document.head.appendChild(script);  // Append the script to the head
+            });
+        }
+
+        // Example usage
+        loadScript("./hw1.js")
+            .then((url) => {
+                alert(`Script ${url} loaded successfully!`);
+            })
+            .catch((error) => {
+                alert(`Error: ${error.message}`);
+            });
+    </script>
+
 </body>
 </html>

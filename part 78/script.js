@@ -1,19 +1,53 @@
 
-function hack(){
+
+
+
+
+const addItem = async (item) => {
+  await randomDelay();
+  let div = document.createElement("div");
+  div.innerHTML = item;
+  document.body.append(div);
+}
+const randomDelay = () => {
+return new Promise((resolve, reject)=>{
+    timeout =  1+6* Math.random()
+    setTimeout (() => {
+      resolve()
+    }, timeout *1000);
     
+})  
 }
-let html= ` <div class="container">
-<h2>Initialing Hacking...</h2>
-<h2>Reading your Files...</h2>
-<h2>Password files Detected...</h2>
-<h2>Sending all passwords and personal files to...</h2>
-<h2>Cleaning up...</h2>       
-</div>`
 
+async function main(){
 
-let rand=Math.random()
+    
+    
+   let t = setInterval(() => {
+        let last = document.body.lastElementChild;
+        document.body.lastElementChild;
+        if(last.innerHTML.endsWith("...")){
+            last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length-3)
+        }
+        else{
 
-if(rand>0.2)
-{
-    return document.querySelector("h2[0]")
-}
+            last.innerHTML += ".";
+        }
+    },100);
+    
+    let text = [
+        "Initialed Hacking now reading your files",
+        "Reading your Files",
+        "Password files Detected",
+        "Sending all passwords and personal files to",
+        "Cleaning up"];
+        
+        for (const item of text) {
+           await addItem(item);
+            
+        }
+        await randomDelay()
+        clearInterval(t);
+        
+    }
+    main();

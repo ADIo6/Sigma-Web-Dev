@@ -2,9 +2,9 @@ console.log('This is prommises');
 
 let prom1= new Promise((resolve, reject)=>{
 
-    let a= Math.random();
+    let a = Math.random();
     if(a<0.5){
-        reject("No random number was not supporting you")
+        reject("No random number was not supporting you 1")
     }
     else{
 
@@ -87,7 +87,8 @@ let prom4= new Promise((resolve, reject)=>{
 //         console.log(err);
         
 //     })
-let p3= Promise.any([prom1,prom2,prom3,prom4])
+
+let p3= Promise.any([prom1,prom2,prom3,prom4]);
 
 p3.then((a)=>{
         console.log(a)
